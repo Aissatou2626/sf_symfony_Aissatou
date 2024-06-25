@@ -23,7 +23,7 @@ class Categorie
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updateAt = null;
 
     public function getId(): ?int
@@ -89,6 +89,7 @@ class Categorie
         return $this;
     }
 
+    #[ORM\PreUpdate]
     public function autoUpdateAt(): static{
         $this->updateAt = new \DateTimeImmutable();
 
