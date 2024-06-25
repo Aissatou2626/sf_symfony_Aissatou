@@ -47,4 +47,5 @@ Pour génerer un formulaire il faut 3 étapes:
   <!-- git commit -m 'feat(categories): add crud for categories' -->
   La convention 
   
-  
+ <!-- yarn watch   -->
+ Commande pour compiler
