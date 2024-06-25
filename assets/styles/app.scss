@@ -1,6 +1,7 @@
 //Import abstract
 @import "abstract/variables";
 @import "abstract/mixins";
+@import "abstract/functions";
 
 // import vendors
 @import "vendor/bootstrap";
@@ -12,4 +13,7 @@
 @import "components/utils";
 
 // Import components
-@import "components/tables"
+@import "components/tables";
+
+// Import Layout
+@import "layout/header";
