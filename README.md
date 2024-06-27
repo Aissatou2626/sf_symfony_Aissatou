@@ -61,3 +61,5 @@ Pour génerer un formulaire il faut 3 étapes:
   <!-- symfony console doctrine:migrations:migrate -->
   Pour migrer 
   Vous pouvez maintenant aller voir daans votre BDD pour verifier que votre table existe bien
+
+
