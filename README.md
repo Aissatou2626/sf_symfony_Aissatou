@@ -35,7 +35,9 @@ Pour génerer un formulaire il faut 3 étapes:
  3-  <!-- Categorie  -->
 
   <!-- symfony console make:controller Backend\CategorieController -->
+  <!-- symfony console make:controller backend\UserController -->
   Pour  creer le fichier CategorieController dans le dossier Backend
+
 
 
   query = get
