@@ -24,6 +24,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180)]
     // Rajouter l'allias(Assert) sur toutes les contraintes 
     #[Assert\NotBlank]
+    
     #[Assert\Length(
         max:180,
         maxMessage: 'L\'email ne doit pas dépasser {{ limit }} caractères',
