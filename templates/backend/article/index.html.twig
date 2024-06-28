@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Création des articles
+{% endblock %}
+
+{% block body %}
+{# <section class="mt-2">
+    <h1 class="text-center">Création des articles</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Enable</th>
+                <th>Date de création</th>
+                <th>Date de modification</th>
+                <th>Votre message</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+      
+             {% for article in articles %}
+                	<td>{{ categorie.id }}</td>
+					<td>{{ categorie.title }}</td>
+					<td>{{ categorie.enable ? 'Actif' : 'Inactif' }}</td>
+					<td>{{ categorie.createdAt|date('Y/m/d')}}</td>
+					<td>{{ categorie.updateAt|date('Y/m/d')}}</td>
+				
+             {% endfor %}
+
+            </tr>
+        </tbody>
+    </table>
+</section> #}
+{% endblock %}
