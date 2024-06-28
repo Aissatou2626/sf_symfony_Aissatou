@@ -35,7 +35,9 @@ Pour génerer un formulaire il faut 3 étapes:
  3-  <!-- Categorie  -->
 
   <!-- symfony console make:controller Backend\CategorieController -->
+  <!-- symfony console make:controller backend\UserController -->
   Pour  creer le fichier CategorieController dans le dossier Backend
+
 
 
   query = get
@@ -45,7 +47,21 @@ Pour génerer un formulaire il faut 3 étapes:
 
   <!-- type(scope): message -->
   <!-- git commit -m 'feat(categories): add crud for categories' -->
-  La convention 
+  La convention de nommage
   
  <!-- yarn watch   -->
  Commande pour compiler
+
+ <!-- git checkout -b 'users' -->
+
+ <!-- symfony console make:user -->
+ Repondre yes, yes partout puis la commande suivante 
+  
+  <!-- symfony console make:migration -->
+  Pour préparer le fichier de migration et ensuite la commande ci-dessous
+
+  <!-- symfony console doctrine:migrations:migrate -->
+  Pour migrer 
+  Vous pouvez maintenant aller voir daans votre BDD pour verifier que votre table existe bien
+
+

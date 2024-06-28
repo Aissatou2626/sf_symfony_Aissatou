@@ -1,6 +1,7 @@
-$primary: #042d38;
+$primary: #0935a5;
 $secondary:#ba22c2;
 $white: #f3F3F3;
+$white-dark: #f0f0f0;
 $black:#131313;
 $text-color:#4d4d4d;
 
@@ -10,3 +11,9 @@ $border-radius: 8px;
 // Font
 $default-font:"Lato", sans-serif;
 $heading-font: "Poppins", sans-serif;
+
+// box-shadow
+$box-shadow-card:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
