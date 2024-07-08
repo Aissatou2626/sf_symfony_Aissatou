@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Modifier un article    
+    Modifier un article 
+    {{ parent() }}   
 {% endblock %}
 
 {% block body %}
-<h1>Modifier un article </h1>
-{{ form_start(form) }}
-{{ form_widget(form) }}
+<section>
+    <h1 class="text-center">Modifier un article </h1>
 
-<button type="submit">Modifier</button>
-{{ form_end(form) }}
+     {% include 'backend/article/_form.html.twig' with { buttonLabel: "Modifier"} %}
+</section>
     
-{% endblock %}o
+{% endblock %}

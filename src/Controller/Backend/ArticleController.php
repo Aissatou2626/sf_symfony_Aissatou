@@ -62,7 +62,8 @@ class ArticleController extends AbstractController
     }
     //Pour modifer un ou plusieurs article(s)
     #[Route('/{id}/update', name: '.update', methods: ['GET', 'POST'])]
-    public function update(?article $article, Request $request): Response
+    // Le param converter dans notre cas est : (?article $article, Request $request)
+    public function update(?article $article, Request $request): Response|RedirectResponse
     {
 
         if (!$article) {
@@ -70,17 +71,21 @@ class ArticleController extends AbstractController
 
             return $this->redirectToRoute('admin.article.index');
         }
+        // On va créer un formulaire et on lui passe la requête
         $form = $this->createForm(articleType::class, $article);
         $form->handleRequest(request: $request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //On fait appelle à  entityManagerInterface($em) qui correspond à la persistance des données
             $this->em->persist($article);
             $this->em->flush();
 
             $this->addFlash('Success', 'L\'article a été modifié');
 
+            // redirectToRoute() permet de rediriger vers une page 
             return $this->redirectToRoute('admin.article.index');
         }
+        // render() permet d'afficher une page html 
         return $this->render('backend/article/update.html.twig', [
             'form' => $form]);
 
