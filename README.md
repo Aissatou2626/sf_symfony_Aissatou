@@ -47,6 +47,8 @@ Pour génerer un formulaire il faut 3 étapes:
 
   <!-- type(scope): message -->
   <!-- git commit -m 'feat(categories): add crud for categories' -->
+  <!-- git push origin articles  -->
+
   La convention de nommage
   
  <!-- yarn watch   -->
@@ -63,5 +65,7 @@ Pour génerer un formulaire il faut 3 étapes:
   <!-- symfony console doctrine:migrations:migrate -->
   Pour migrer 
   Vous pouvez maintenant aller voir daans votre BDD pour verifier que votre table existe bien
+
+  <!-- Identifiant admin  admin@test.com ; mot de pass: Test1234 -->
 
 
