@@ -21,6 +21,7 @@
 						<div class="card-btn">
 							{# Pour rediriger vers la page de modification #}
 							<a href="{{ path('admin.article.update', {id: article.id}) }}" class="btn btn-warning">Modifier</a>
+							{% include 'backend/article/_deleteForm.html.twig' %}
 						</div>
 					</div>
 				</div>
