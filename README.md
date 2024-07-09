@@ -69,3 +69,6 @@ Pour génerer un formulaire il faut 3 étapes:
   <!-- Identifiant admin  admin@test.com ; mot de pass: Test1234 -->
 
 
+<!-- symfony console (make ou doctrine) --help -->
+Pour voir toutes les commandes
+
