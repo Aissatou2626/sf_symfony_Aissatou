@@ -45,6 +45,9 @@ class ArticleController extends AbstractController
 
         // Si le formulaire est soumis  et valide, on persiste l'objet en BDD
         if ($form->isSubmitted() && $form->isValid()) {
+            // En faisant ça( $this->getUser()), on récupère l'utilisateur connecté actuellement
+            $user = $this->getUser();
+            $article->setUser($user);
 
             // On met en file d'attente l'objet à persister
             $this->em->persist($article);

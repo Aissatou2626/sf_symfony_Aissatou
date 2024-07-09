@@ -15,9 +15,14 @@
 					<div class="card">
 						<h4>{{ article.title }}</h4>
 						<em>{{ article.createdAt|format_datetime('full', 'none') }}</em>
+						{# Pour pouvoir afficher l'auteur #}
+						<p>{{ article.user.fullName }}</p>
 						<p>
 							{{ article.content|length > 150 ?  article.content|slice(0, 150) ~ '...' : article.content }}
 						</p>
+							{% for categorie in article.categories %}
+								#{{ categorie.name }}								
+							{% endfor %}
 						<div class="card-btn">
 							{# Pour rediriger vers la page de modification #}
 							<a href="{{ path('admin.article.update', {id: article.id}) }}" class="btn btn-warning">Modifier</a>
