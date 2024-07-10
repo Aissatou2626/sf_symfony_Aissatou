@@ -55,6 +55,7 @@ Pour génerer un formulaire il faut 3 étapes:
  Commande pour compiler
 
  <!-- git checkout -b 'users' -->
+ Pour créer et se déplacer sur la branche users
 
  <!-- symfony console make:user -->
  Repondre yes, yes partout puis la commande suivante 
