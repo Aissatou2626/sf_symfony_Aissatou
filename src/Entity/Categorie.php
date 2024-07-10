@@ -2,13 +2,18 @@
 
 namespace App\Entity;
 
-use App\Repository\CategorieRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Traits\EnableTrait;
+use App\Entity\Traits\DateTimeTrait;
+use App\Repository\CategorieRepository;
 
 #[ORM\Entity(repositoryClass: CategorieRepository::class)]
-#[ORM\HasLifecycleCallbacks]
+#[ORM\HasLifecycleCallbacks] 
 class Categorie
 {
+    use EnableTrait, 
+        DateTimeTrait;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -17,14 +22,6 @@ class Categorie
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column]
-    private ?bool $enable = null;
-
-    #[ORM\Column]
-    private ?\DateTimeImmutable $createdAt = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?\DateTimeImmutable $updateAt = null;
 
     public function getId(): ?int
     {
@@ -39,59 +36,6 @@ class Categorie
     public function setName(string $name): static
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function isEnable(): ?bool
-    {
-        return $this->enable;
-    }
-
-    public function setEnable(bool $enable): static
-    {
-        $this->enable = $enable;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->createdAt;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $createdAt): static
-    {
-        $this->createdAt = $createdAt;
-
-        return $this;
-    }
-
-    #[ORM\PrePersist]
-    public function autoSetCreatedAt(): static{
-        if(!$this->createdAt){
-            $this->createdAt = new \DateTimeImmutable(); 
-        }
-
-        return $this;
-    }
-
-
-    public function getUpdateAt(): ?\DateTimeImmutable
-    {
-        return $this->updateAt;
-    }
-
-    public function setUpdateAt(\DateTimeImmutable $updateAt): static
-    {
-        $this->updateAt = $updateAt;
-
-        return $this;
-    }
-
-    #[ORM\PreUpdate]
-    public function autoUpdateAt(): static{
-        $this->updateAt = new \DateTimeImmutable();
 
         return $this;
     }

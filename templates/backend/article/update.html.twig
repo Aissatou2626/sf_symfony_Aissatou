@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Modifier un article 
+    {{ parent() }}   
+{% endblock %}
+
+{% block body %}
+<section>
+    <h1 class="text-center">Modifier un article </h1>
+
+    
+     {% include 'backend/article/_form.html.twig' with { buttonLabel: "Modifier"} %}
+</section>
+    
+{% endblock %}

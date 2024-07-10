@@ -41,7 +41,7 @@ class CategorieController extends AbstractController
         // On créé notre formulaire en lui passant l'objet qu'il doit remplir
         $form = $this->createForm(CategorieType::class, $Categorie);
 
-        // On passe  la request au formulaire pour qu'il puisse récuopérer les données
+        // On passe  la request au formulaire pour qu'il puisse récupérer les données
         $form->handleRequest($request);
 
         // Si le formulaire est soumis  et valide, on persiste l'objet en BDD

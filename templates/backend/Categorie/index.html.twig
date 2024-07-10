@@ -29,7 +29,7 @@
 						<td>{{ categorie.name }}</td>
 						<td>{{ categorie.enable ? 'Actif' : 'Inactif' }}</td>
 						<td>{{ categorie.createdAt|date('Y/m/d')}}</td>
-						<td>{{ categorie.updateAt|date('Y/m/d')}}</td>
+						<td>{{ categorie.updatedAt|date('Y/m/d')}}</td>
 						<td>
 							<div class="cell-flex">
 								<a href="{{ path('admin.categories.update', {id: categorie.id}) }}">Modifier</a>
