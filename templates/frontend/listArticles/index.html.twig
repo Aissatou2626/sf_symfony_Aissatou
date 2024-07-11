@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Ma page d'accueil
+    Tous nos articles
     {{ parent() }}
 {% endblock %}
 
 {% block body %}
-	{% include 'frontend/home/_banner.html.twig' %}
-    {% include 'frontend/home/_list.html.twig' %}
+ {% include 'frontend/listArticles/_list.html.twig' %}
 
 {% endblock %}
