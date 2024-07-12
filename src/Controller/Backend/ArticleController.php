@@ -67,9 +67,8 @@ class ArticleController extends AbstractController
     //Pour modifer un ou plusieurs article(s)
     #[Route('/{id}/update', name: '.update', methods: ['GET', 'POST'])]
     // Le param converter dans notre cas est : (?article $article, Request $request)
-    public function update(?article $article, Request $request): Response|RedirectResponse
+    public function update(?Article $article, Request $request): Response|RedirectResponse
     {
-
         if (!$article) {
             $this->addFlash('error', 'L\'article demandé n\'existe pas');
 

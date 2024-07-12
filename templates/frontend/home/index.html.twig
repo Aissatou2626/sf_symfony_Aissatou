@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Ma page d'accueil
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% include 'frontend/home/_banner.html.twig' %}
+    {% include 'frontend/home/_list.html.twig' %}
+
+{% endblock %}

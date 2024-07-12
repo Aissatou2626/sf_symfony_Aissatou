@@ -3,5 +3,16 @@
     justify-content: $justify;
     align-items: $align;
     flex-wrap: $wrap;
+    gap: $gap;
     flex-direction: $direction;
+}
+
+@mixin grid($column: 1fr, $gap: 0, $breakpoint: 767px){
+    display: grid;
+    grid-template-columns: $column;
+    gap: $gap;
+
+    @media screen and (max-width: $breakpoint){
+        grid-template-columns: 1fr;
+    }
 }

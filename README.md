@@ -16,6 +16,7 @@ Pour créer automatiquement sa base de données
  {{}} = echo
 
  <!-- symfony console make:controller -->
+ <!-- symfony console make:controller Frontend\home -->
  Cette commande permet de générer automatiquement  ma class, puis on précise le nom de la class qu'on veut créer.
 
  MODEL: permet de connecter avec la BDD(c'est le pont)
@@ -55,6 +56,7 @@ Pour génerer un formulaire il faut 3 étapes:
  Commande pour compiler
 
  <!-- git checkout -b 'users' -->
+ Pour créer et se déplacer sur la branche users
 
  <!-- symfony console make:user -->
  Repondre yes, yes partout puis la commande suivante 
@@ -72,3 +74,7 @@ Pour génerer un formulaire il faut 3 étapes:
 <!-- symfony console (make ou doctrine) --help -->
 Pour voir toutes les commandes
 
+******************************************************
+	<!-- {{ dump(app.request.get('_route')) }} -->
+Pour nous donner l'URL de la page où nous sommes
+******************************************************
